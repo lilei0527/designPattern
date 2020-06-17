@@ -5,7 +5,7 @@ package ResponsibilityChainPattern;
  **/
 public class ResponsibilityChainPatternDemo {
     public static void main(String[] args) {
-        Log log = new Log(LogPipeline.ERROR_LEVEL, "这里有一个error级别错误");
+        Log log = new Log(LogPipeline.INFO_LEVEL, "这里有一个info级别错误");
         Pipeline logPipeline = new LogPipeline();
         LogValue debugLogValue = new DebugLogValue();
         LogValue infoLogValue = new InfoLogValue();

@@ -8,7 +8,9 @@ public class Pc implements Computer {
     public void bootUp() {
         System.out.println("pc boot up start");
         for (Program program : programs) {
-            program.execute();
+            if (program instanceof BootUpProgram) {
+                program.execute();
+            }
         }
         System.out.println("pc boot up end");
     }
