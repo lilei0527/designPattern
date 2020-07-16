@@ -13,9 +13,9 @@ public class FilterPatternDemo {
         personList.add(person);
         personList.add(person1);
         personList.add(person2);
-        Filter ageFilter = new AgeFilter();
-        Filter sexFilter = new SexFilter();
-        FilterChain filterChain = new PersonFilterChain();
+        Filter<Person> ageFilter = new AgeFilter();
+        Filter<Person> sexFilter = new SexFilter();
+        FilterChain<Person> filterChain = new AbstractFilterChain<>();
         filterChain.addFilter(ageFilter);
         filterChain.addFilter(sexFilter);
         filterChain.doFilter(personList);
