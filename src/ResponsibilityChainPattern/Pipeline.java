@@ -2,13 +2,13 @@ package ResponsibilityChainPattern;
 
 import java.util.List;
 
-public interface Pipeline {
+public interface Pipeline<V> {
 
-    Value getFirst();
+    Value<V> getFirst();
 
-    void setFirst(Value value);
+    void setFirst(Value<V> value);
 
-    List<Value> getValues();
+    List<Value<V>> getValues();
 
-    void removeValue(Value value);
+    void removeValue(Value<V> value);
 }

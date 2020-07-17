@@ -14,9 +14,4 @@ public class InfoLogValue extends LogValue {
         }
         invokeNext(log);
     }
-
-    @Override
-    public void invoke() {
-
-    }
 }

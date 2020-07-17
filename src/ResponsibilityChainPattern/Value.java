@@ -3,12 +3,8 @@ package ResponsibilityChainPattern;
 /**
  * @author lilei
  **/
-public interface Value {
-    Value getNext();
-
-    void setNext(Value value);
-
-    void invoke();
-
-
+public interface Value<V> {
+    Value<V> getNext();
+    void setNext(Value<V> value);
+    void invoke(V v);
 }

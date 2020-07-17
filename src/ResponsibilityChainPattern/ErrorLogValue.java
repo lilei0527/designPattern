@@ -15,8 +15,5 @@ public class ErrorLogValue extends LogValue {
         invokeNext(log);
     }
 
-    @Override
-    public void invoke() {
 
-    }
 }

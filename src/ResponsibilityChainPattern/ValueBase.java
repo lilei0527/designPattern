@@ -3,16 +3,16 @@ package ResponsibilityChainPattern;
 /**
  * @author lilei
  **/
-public abstract class ValueBase implements Value{
-    Value next;
+public abstract class ValueBase<V> implements Value<V> {
+    Value<V> next;
 
     @Override
-    public Value getNext() {
+    public Value<V> getNext() {
         return next;
     }
 
     @Override
-    public void setNext(Value value) {
+    public void setNext(Value<V> value) {
         this.next = value;
     }
 }

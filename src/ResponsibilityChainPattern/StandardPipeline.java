@@ -6,24 +6,25 @@ import java.util.List;
 /**
  * @author lilei
  **/
-public  class StandardPipeline implements Pipeline {
-    Value first = null;
+public class StandardPipeline<V> implements Pipeline<V> {
+    Value<V> first = null;
 
 
     @Override
-    public Value getFirst() {
+    public Value<V> getFirst() {
         return first;
     }
 
     @Override
-    public void setFirst(Value value) {
+    public void setFirst(Value<V> value) {
         this.first = value;
     }
 
+
     @Override
-    public List<Value> getValues() {
-        List<Value> values = new ArrayList<>();
-        Value current = first;
+    public List<Value<V>> getValues() {
+        List<Value<V>> values = new ArrayList<>();
+        Value<V> current = first;
         while (current != null) {
             values.add(current);
             current = current.getNext();
@@ -32,10 +33,10 @@ public  class StandardPipeline implements Pipeline {
     }
 
     @Override
-    public void removeValue(Value value) {
+    public void removeValue(Value<V> value) {
 
-        Value current;
-        if(first == value) {
+        Value<V> current;
+        if (first == value) {
             first = first.getNext();
             current = null;
         } else {
