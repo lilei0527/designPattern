@@ -5,22 +5,22 @@ package DecoratorPattern;
 * */
 public class DecoratorPatternDemo {
     public static void main(String[] args) {
-        Iphone iphone = new Iphone();
+        Phone iphone = new Iphone();
         iphone.sale();
 
         System.out.println();
 
-        IphoneDecorator iphoneDecorator = new IphoneDecorator(iphone);
+        Phone iphoneDecorator = new IphoneDecorator(iphone);
         iphoneDecorator.sale();
 
         System.out.println("----------------------------------");
 
-        HuaWei huaWei = new HuaWei();
+        Phone huaWei = new HuaWei();
         huaWei.sale();
 
         System.out.println();
 
-        HuaWeiDecorator huaWeiDecorator = new HuaWeiDecorator(huaWei);
+        Phone huaWeiDecorator = new HuaWeiDecorator(huaWei);
         huaWeiDecorator.sale();
     }
 }

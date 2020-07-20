@@ -50,6 +50,8 @@ public class Application {
         }
     }
 
+
+
     public void fireOnFinish() {
         for (ApplicationListener listener : listeners) {
             listener.onFinish(this);
