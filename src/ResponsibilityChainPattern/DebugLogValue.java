@@ -8,12 +8,10 @@ public class DebugLogValue extends LogValue {
     @Override
     public void invoke(Log log) {
         System.out.println("debug:");
-        if (log.getLeave() <= LogPipeline.DEBUG_LEVEL) {
+        if (log.getLeave() <= DEBUG_LEVEL) {
             log.printLog();
         }
         invokeNext(log);
     }
 
 }
-
-

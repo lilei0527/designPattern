@@ -15,4 +15,10 @@ public abstract class ValueBase<V> implements Value<V> {
     public void setNext(Value<V> value) {
         this.next = value;
     }
+
+    void invokeNext(V v) {
+        if (getNext() != null) {
+            getNext().invoke(v);
+        }
+    }
 }

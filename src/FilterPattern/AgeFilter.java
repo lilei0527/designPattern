@@ -2,13 +2,12 @@ package FilterPattern;
 
 import java.util.List;
 
-public class AgeFilter implements Filter<Person> {
+public class AgeFilter implements Filter<List<Person>> {
 
     @Override
-    public void doFilter(List<Person> list, FilterChain<Person> filterChain) {
+    public void doFilter(List<Person> people, FilterChain<List<Person>> filterChain) {
+        people.removeIf(person -> (person).getAge() > 5);
 
-        list.removeIf(person -> (person).getAge() > 5);
-
-        filterChain.doFilter(list);
+        filterChain.doFilter(people);
     }
 }

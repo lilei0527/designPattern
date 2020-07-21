@@ -12,13 +12,11 @@ public  class AbstractFilterChain<T> implements FilterChain<T> {
     }
 
     @Override
-    public void doFilter(List<T> list) {
+    public void doFilter(T t) {
         if (position < filters.size()) {
             Filter<T> filter = filters.get(position);
             position++;
-            filter.doFilter(list, this);
+            filter.doFilter(t, this);
         }
-
-
     }
 }

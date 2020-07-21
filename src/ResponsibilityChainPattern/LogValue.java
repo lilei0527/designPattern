@@ -4,10 +4,7 @@ package ResponsibilityChainPattern;
  * @author lilei
  **/
 public abstract class LogValue extends ValueBase<Log> {
-
-    void invokeNext(Log log) {
-        if (getNext() != null) {
-            getNext().invoke(log);
-        }
-    }
+    public static int DEBUG_LEVEL = 1;
+    public static int INFO_LEVEL = 2;
+    public static int ERROR_LEVEL = 3;
 }
